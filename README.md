@@ -56,7 +56,7 @@
 ![WechatIMG1](https://github.com/bcopen/web3/assets/16407912/573a9d6d-de2a-4802-aee2-12bae5159d41)
 
 
-**项目合约地址(Scroll Sepolia Testnet)**
+**项目合约地址(Arbitrum Sepolia Testnet)**
 
 
 项目demo展示效果图
