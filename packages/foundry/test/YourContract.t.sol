@@ -1,10 +1,10 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "../contracts/YourContract.sol";
+import {Raffle} from "../contracts/Raffle.sol";
 
-contract YourContractTest is Test {
+contract Raffle is Test {
     YourContract public yourContract;
 
     function setUp() public {

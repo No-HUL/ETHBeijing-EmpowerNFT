@@ -1,13 +1,19 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "../contracts/YourContract.sol";
-import "./DeployHelpers.s.sol";
+import {Script} from 'forge-std/Script.sol';
+import {Raffle} from '../contracts/Raffle.sol';
+import {SNFT} from '../contracts/SNFT.sol';
+import {ScaffoldETHDeploy} from './DeployHelpers.s.sol';
 
-contract DeployScript is ScaffoldETHDeploy {
+contract DeployRaffle is Script {
+    
     error InvalidPrivateKey(string);
 
-    function run() external {
+    Raffle raffle;
+    SNFT sNft;
+
+    function run() external returns(Raffle, SNFT, ScaffoldETHDeploy){
         uint256 deployerPrivateKey = setupLocalhostEnv();
         if (deployerPrivateKey == 0) {
             revert InvalidPrivateKey(
@@ -15,13 +21,8 @@ contract DeployScript is ScaffoldETHDeploy {
             );
         }
         vm.startBroadcast(deployerPrivateKey);
-        YourContract yourContract =
-            new YourContract(vm.addr(deployerPrivateKey));
-        console.logString(
-            string.concat(
-                "YourContract deployed at: ", vm.toString(address(yourContract))
-            )
-        );
+        raffle =new Raffle(vm.addr(deployerPrivateKey));
+        
         vm.stopBroadcast();
 
         /**

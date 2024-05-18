@@ -1,79 +1,75 @@
-# 🏗 Scaffold-ETH 2
+## 一、项目介绍：
+**基于Ethereum L2的Web3 NFT赋能平台（EmpowerNFT） 助力每个Web3的NFT（非蓝筹）的Holder产生价值**
+* 许多作为奖励发放的NFT缺乏实际效用和交易价值。我们的项目致力于解决这一问题，通过赋能这些NFT，为用户带来实际的收益和参与感。
+  
+* 我们的项目是NFT赋能平台（EmpowerNFT），它旨在为学习平台/quest发布平台的学员/用户提供额外的价值和激励。通过将无交易价值的NFT转化为具有效用的ERC20代币，我们旨在构建一个系统，其中用户、和我们的平台都能获得显著的好处。
+* 我们设想的具体机制：一个基于NFT质押（燃烧）和Token权重的抽奖系统，旨在激励用户参与并提供一种通过质押NFT获得奖励的方式。同时，白名单和准入NFT数量的设置确保了活动的可控性和公平性。
+* 交互场景：参与进来的有三个实体，一是NFT发行方，二是用户，三是NFT赋能平台。发行方在NFT赋能平台“登记”。用户在学习平台学完后收到NFT奖励，然后把NFT拿到NFT赋能平台质押。NFT赋能平台检查这个NFT是否是”登记“过的，如果是，那返还用户一个ERC20代币（凭证），用户凭借这个凭证，可以参加一个彩票活动（或者其它活动），参考pooltogether。
+举一个实例化场景：
+应用场景：在线课程完成奖励系统
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+**场景背景**：
+一个在线教育平台想要增加学生的参与度和完成率，决定采用NFT作为奖励机制，并通过EmpowerNFT平台为这些NFT赋能，增加其价值。
+场景步骤：
+1. 课程完成奖励：
+   - 学生在完成在线课程后，获得一个独特的NFT作为奖励。这个NFT代表他们的课程完成成就。
+2. NFT质押：
+   - 学生决定将他们的NFT质押到EmpowerNFT平台上，以参与抽奖活动。
+3. 白名单验证：
+   - EmpowerNFT平台首先验证学生的NFT是否在项目方提供的白名单中。只有白名单上的NFT才能被接受用于质押。
+4. 准入Token数量检查：
+   - 如果学生的NFT在白名单上，平台接下来检查学生是否持有足够的Token（作为质押的NFT的等价Token）来满足参与抽奖的条件。
+5. 参与抽奖：
+   - 符合条件的学生可以参加抽奖活动。他们需要在EmpowerNFT平台的LP池中用Token交换U（可能是平台的通用货币或稳定币）。
+6. 抽奖结果：
+   - 抽奖活动按照Token权重进行，即学生持有的Token数量越多，中奖的机会越大。平台随机挑选胜者，并分配奖金。
+7. 奖金分配：
+   - 中奖的学生将根据抽奖规则获得奖金，这可能是更多的Token、U或其他形式的奖励。
+8. 社区反馈：
+   - 学生可以在EmpowerNFT的社区中分享他们的抽奖经历，增加社区的互动和活跃度。
+9. 持续激励：
+   - 平台定期举办此类活动，鼓励学生继续参与课程学习，并为他们的成就获得奖励。
+通过这个应用场景，EmpowerNFT平台不仅为在线教育平台的学生提供了一种新颖的激励机制，还通过NFT质押和抽奖活动，为学生创造了额外的价值和乐趣。这种模式可以增加学生的参与度，提高课程完成率，并为NFT市场带来新的活力。
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+## 二、项目特色
 
-⚙️ Built using NextJS, RainbowKit, Foundry, Wagmi, Viem, and Typescript.
+1. 创新的NFT赋能机制：
+   - 通过将无交易价值的NFT转化为具有实际效用的ERC20代币，EmpowerNFT提供了一种创新的解决方案，赋予NFT新的生命和价值。
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
-- 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+2. 教育与激励相结合：
+   - 项目鼓励用户通过学习获得NFT奖励，并通过质押（燃烧）这些NFT获得更多激励，形成了学习和奖励的良性循环。
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+3. 跨平台合作：
+   - 与多个web3学习平台的合作，使得EmpowerNFT能够覆盖更广泛的用户群体，并且为这些平台增加了额外的用户粘性和吸引力。
 
-## Requirements
+4. 用户友好的界面设计：
+   - 简洁直观的用户界面设计，使得用户能够轻松地参与质押（燃烧）和活动，提高了用户体验。
 
-Before you begin, you need to install the following tools:
+5. 多样化的活动设计：
+   - 设计彩票、竞猜等多样化的活动，增加了用户参与的趣味性和吸引力。
 
-- [Node (>= v18.17)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
-- [Git](https://git-scm.com/downloads)
+6.  Web3的普及推广：
+    - 通过赋能NFT引导学习平台用户参与实际交互，推动web3基础教育和加密文化的普及。
 
-## Quickstart
+## 三、项目交互逻辑
 
-To get started with Scaffold-ETH 2, follow the steps below:
+![WechatIMG1](https://github.com/bcopen/web3/assets/16407912/573a9d6d-de2a-4802-aee2-12bae5159d41)
 
-1. Install dependencies if it was skipped in CLI:
 
-```
-cd my-dapp-example
-yarn install
-```
+**项目合约地址(Scroll Sepolia Testnet)**
 
-2. Run a local network in the first terminal:
 
-```
-yarn chain
-```
+项目demo展示效果图
 
-This command starts a local Ethereum network using Foundry. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `packages/foundry/foundry.toml`.
 
-3. On a second terminal, deploy the test contract:
+项目demo展示视频
 
-```
-yarn deploy
-```
 
-This command deploys a test smart contract to the local network. The contract is located in `packages/foundry/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/foundry/script` to deploy the contract to the network. You can also customize the deploy script.
+## 四、关于我们
 
-4. On a third terminal, start your NextJS app:
-
-```
-yarn start
-```
-
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
-
-Run smart contract test with `yarn foundry:test`
-
-- Edit your smart contract `YourContract.sol` in `packages/foundry/contracts`
-- Edit your frontend homepage at `packages/nextjs/app/page.tsx`. For guidance on [routing](https://nextjs.org/docs/app/building-your-application/routing/defining-routes) and configuring [pages/layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts) checkout the Next.js documentation.
-- Edit your deployment scripts in `packages/foundry/script`
-
-## Documentation
-
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
-
-To know more about its features, check out our [website](https://scaffoldeth.io).
-
-## Contributing to Scaffold-ETH 2
-
-We welcome contributions to Scaffold-ETH 2!
-
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+❤️ 项目成员 & 分工
+1. 超自然
+2. a
+3. a
+   
+顾问
